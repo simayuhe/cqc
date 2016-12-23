@@ -1,0 +1,10 @@
+记录成功案例：
+第一步：在github上建立一个新项目；
+第二步：通过地址将其复制到本地；
+第三步：在Windows直接将文件加入文件夹中然后点击change，然后同步即可；
+第四步：在Ubuntu中加入文件之后运行：
+	git add .
+	git commit -m "注释"
+	git push 
+ 
+	
