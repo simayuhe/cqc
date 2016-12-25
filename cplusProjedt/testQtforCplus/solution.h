@@ -9,7 +9,7 @@ class Solution
 public:
     Solution();
     int strStr (string haystack,string needle);
-
+    string countAndSay(int n);
 };
 
 #endif // SOLUTION_H

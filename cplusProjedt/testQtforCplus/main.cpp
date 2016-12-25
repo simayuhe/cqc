@@ -1,19 +1,17 @@
 #include <iostream>
 #include "solution.h"
+#include <stdio.h>
+#include <sstream>
 using namespace std;
 
 int main()
 {
     cout << "Hello World!" << endl;
     Solution mysolution;
-    string haystack;
-    haystack={"this is the first name "};
-    string needle;
-    needle={"the"};
-    int idx;
-    idx=mysolution.strStr(haystack,needle);
-    cout<<idx<<endl;
-    cout<<"I want to see something created by myself !"<<endl;
+    int a_int;
+    a_int=3;
+    cout<<"input :"<<a_int<<endl;
+    cout <<"result :"<< mysolution.countAndSay(a_int)<<endl;
     return 0;
 }
 
