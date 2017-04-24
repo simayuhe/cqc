@@ -65,5 +65,8 @@ public:
 	int removeElement(vector<int>& nums, int val);
 	int strStr(string haystack, string needle);
 	bool isValidSudoku(vector<vector<char>>& board);
+
+	int mySqrt(int x);
+	int searchInsert(vector<int>& nums, int target);
 };
 

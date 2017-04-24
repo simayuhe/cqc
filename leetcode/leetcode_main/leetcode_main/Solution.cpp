@@ -528,3 +528,53 @@ bool Solution::isValidSudoku(vector<vector<char>>& board)
 {
 	return true;//
 }
+
+int Solution::mySqrt(int x) {
+	//输入一个整数，输出它的平方根
+	if (x == 1)
+		return x;
+
+	long long int s;
+	s = x / 2;
+	long long int leftflag = 0, rightflag = x;
+	while (s*s != x && leftflag+1<rightflag)
+	{
+
+		if (s*s < x)
+		{//在右侧区间内寻找
+			leftflag = s;
+		}
+		else
+		{
+			rightflag = s;
+		}
+		s = (leftflag + rightflag) / 2;
+		cout << "left " << leftflag << endl;
+		cout << "right" << rightflag << endl;
+		cout << "s" << s << endl;
+	} 
+		return s;
+
+	/*来自博客的一个参考*/
+		//long long left = 0, right = (x / 2) + 1;
+		//while (left <= right) {
+		//	long long mid = (left + right) / 2;
+		//	long long sq = mid * mid;
+		//	if (sq == x) return mid;
+		//	else if (sq < x) left = mid + 1;
+		//	else right = mid - 1;
+		//}
+		//return right;
+
+}
+
+int Solution::searchInsert(vector<int>& nums, int target) {
+	int position=0;
+	vector<int>::iterator iter = nums.begin();
+	while (iter != nums.end() && target > *iter)// && target != *iter)
+	{
+		iter++; position++;
+	}
+
+	return position;
+}

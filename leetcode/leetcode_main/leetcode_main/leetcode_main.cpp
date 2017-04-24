@@ -127,9 +127,28 @@ int _tmain(int argc, _TCHAR* argv[])
 	//cout << length << endl;
 
 	/*Implement strStr()*/
-	string haystack{ "this is the first time " }, needle{ "the" };
-	int idx{ solution.strStr(haystack, needle) };
-	cout << idx << endl;
-	return 0;
+	//string haystack{ "this is the first time " }, needle{ "the" };
+	//int idx{ solution.strStr(haystack, needle) };
+	//cout << idx << endl;
+	//return 0;
+
+	
+/*my Sqrt */
+//int x,s;
+//x = 23435464369436;
+//s = solution.mySqrt(x);
+//cout << s << endl;
+
+
+/*search	insert position*/
+vector<int> numbers = { 1, 2, 3, 4 };
+int target = 3;
+int position;
+position = solution.searchInsert(numbers, target);
+cout << position << endl;
+
+
+
+return 0;
 }
 
