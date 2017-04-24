@@ -1,4 +1,5 @@
 整理leetcode 题目，从easy 38开始：
+
  38. Count and Say
 
 The count-and-say sequence is the sequence of integers beginning as follows:
@@ -139,4 +140,17 @@ string Solution::countAndSay(int n) {
 
 }
 
+ 58. Length of Last Word
+
+Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
+
+If the last word does not exist, return 0.
+
+Note: A word is defined as a character sequence consists of non-space characters only.
+
+For example,
+Given s = "Hello World",
+return 5.
+
+注：给定一个字符串，返回最后一个单词的长度。
 

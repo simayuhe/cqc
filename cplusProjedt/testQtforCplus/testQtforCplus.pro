@@ -9,3 +9,6 @@ SOURCES += main.cpp \
 HEADERS += \
     solution.h
 
+OTHER_FILES += \
+    readme.txt
+
