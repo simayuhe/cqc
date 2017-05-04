@@ -578,3 +578,21 @@ int Solution::searchInsert(vector<int>& nums, int target) {
 
 	return position;
 }
+
+int Solution::climbStairs(int n) {
+	//直接进行递归
+	//if (n == 1) return 1;
+	//if (n == 2) return 2;
+	//return climbStairs(n - 1) + climbStairs(n - 2);
+	//利用递归和循环的转换
+	if (n == 1) return 1;
+	if (n == 2) return 2;
+	vector<int> res;
+	res.push_back(1);
+	res.push_back(2);
+	for (int i = 2; i < n ; i++)
+	{
+		res.push_back(res.at(i - 1) + res.at(i - 2));
+	}	
+	return res.back();// .at(n - 1);
+}

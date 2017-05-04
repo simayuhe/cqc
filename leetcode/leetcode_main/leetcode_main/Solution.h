@@ -68,5 +68,6 @@ public:
 
 	int mySqrt(int x);
 	int searchInsert(vector<int>& nums, int target);
+	int climbStairs(int n);
 };
 

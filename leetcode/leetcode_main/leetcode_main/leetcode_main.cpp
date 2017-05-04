@@ -141,12 +141,18 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 /*search	insert position*/
-vector<int> numbers = { 1, 2, 3, 4 };
-int target = 3;
-int position;
-position = solution.searchInsert(numbers, target);
-cout << position << endl;
+//vector<int> numbers = { 1, 2, 3, 4 };
+//int target = 3;
+//int position;
+//position = solution.searchInsert(numbers, target);
+//cout << position << endl;
 
+/*climbing stairs*/
+int  n;
+n = 4;
+int out;
+out = solution.climbStairs(n);
+cout << out << endl;
 
 
 return 0;
