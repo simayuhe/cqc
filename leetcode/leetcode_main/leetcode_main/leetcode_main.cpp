@@ -6,6 +6,36 @@
 #include "myprintf.h"
 #include <iostream>
 #include "intSLLST.h"
+
+void createBitree(TreeNode * &T)
+{
+	char ch;
+	if ((ch = getchar()) == '#')
+	{
+		T = NULL;
+	}
+	else
+	{
+		T = new TreeNode(ch - '0');//
+		//T->val = ch-'0';
+		createBitree(T->left);
+		createBitree(T->right);
+	}
+}
+void PreOrderTraverse(TreeNode * &T)
+{
+	if (T)
+	{
+		cout << T->val;
+		PreOrderTraverse(T->left);
+		PreOrderTraverse(T->right);
+	}
+	else
+	{
+		cout << "";
+	}
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Solution solution;
@@ -148,12 +178,32 @@ int _tmain(int argc, _TCHAR* argv[])
 //cout << position << endl;
 
 /*climbing stairs*/
-int  n;
-n = 4;
-int out;
-out = solution.climbStairs(n);
-cout << out << endl;
+//int  n;
+//n = 4;
+//int out;
+//out = solution.climbStairs(n);
+//cout << out << endl;
 
+
+/*Remove Duplicates from Sorted List*/
+//ListNode A{ 1 }, B{ 2 }, C{ 2 }, D{ 4 }, E{ 4 };
+//ListNode *head = &A;
+//A.next = &B; B.next = &C; C.next = &D; D.next = &E; E.next = NULL;
+//ListNode* result;
+//result = solution.deleteDuplicates(head);
+//cout << (*result).val << endl;
+//while ((*result).next != NULL)
+//{//这种输出要求result不能只有一个
+//	
+//	result = result->next;
+//	cout << (*result).val << endl;
+//}
+TreeNode *T;
+cout << "创建一颗树，其中A->Z字符代表树的数据，用“#”表示空树:" << endl;
+createBitree(T);
+cout << "先序递归遍历：" << endl;
+PreOrderTraverse(T);
+cout << endl;
 
 return 0;
 }

@@ -596,3 +596,24 @@ int Solution::climbStairs(int n) {
 	}	
 	return res.back();// .at(n - 1);
 }
+
+ListNode* Solution::deleteDuplicates(ListNode* head) {
+	ListNode* former;ListNode* latter;
+	former = head; latter = former->next;
+	while (latter != NULL)
+	{
+		if (former->val == latter->val)
+		{
+			former->next = latter->next; latter = former->next;
+		}
+		else
+		{
+			former = latter; latter = former->next;
+		}
+	} 
+	return head;
+
+}
+bool Solution::isSameTree(TreeNode* p, TreeNode* q) {
+	return false;
+}

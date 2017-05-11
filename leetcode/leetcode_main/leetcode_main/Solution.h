@@ -39,6 +39,14 @@ private:
 	ListNode *head, *tail;
 };
 
+ /*Definition for a binary tree node.*/
+ struct TreeNode {
+     int val;
+     TreeNode *left;
+     TreeNode *right;
+     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ };
+ 
 class Solution
 {
 public:
@@ -69,5 +77,8 @@ public:
 	int mySqrt(int x);
 	int searchInsert(vector<int>& nums, int target);
 	int climbStairs(int n);
+
+	ListNode* deleteDuplicates(ListNode* head);
+	bool isSameTree(TreeNode* p, TreeNode* q);
 };
 
