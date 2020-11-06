@@ -9,10 +9,10 @@ from baselines.common import set_global_seeds, explained_variance
 from baselines.common.runners import AbstractEnvRunner
 from baselines.common import tf_util
 
-from baselines.a2c.utils import discount_with_dones
-from baselines.a2c.utils import Scheduler, make_path, find_trainable_variables
-from baselines.a2c.utils import cat_entropy, mse
-from baselines.a2c.utils import EpisodeStats
+from baselines.sia2c.utils import discount_with_dones
+from baselines.sia2c.utils import Scheduler, make_path, find_trainable_variables
+from baselines.sia2c.utils import cat_entropy, mse
+from baselines.sia2c.utils import EpisodeStats
 class Model(object):
 
     def __init__(self, policy, ob_space, ac_space, nenvs, nsteps,
